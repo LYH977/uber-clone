@@ -16,6 +16,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import { setDestination, setOrigin } from '../slices/navSlice';
 import { useDispatch } from 'react-redux';
 import Autocomplete from '../components/Autocomplete/Autocomplete';
+import NavFavourite from '../components/NavFavourite';
 
 export type HomeProps = NativeStackScreenProps<
   RootStackParamList,
@@ -52,6 +53,7 @@ const HomeScreen = ({ route, navigation }: HomeProps) => {
           }}
         />
         <NavOptions navigation={navigation} />
+        <NavFavourite />
       </View>
     </SafeAreaView>
   );
